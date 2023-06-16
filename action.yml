@@ -5,23 +5,22 @@ runs:
   using: "composite"
   steps:
     - uses: actions/checkout@v3
-  steps:
-   - name: Create folder
+    - name: Create folder
         run: |
         mkdir .checkmate
-   - name: Store state
-     uses: actions/upload-artifact@v2
-     with:
-       name: state
-       path: .checkmate
-   - name: Get state
-     uses: actions/download-artifact@v2
-     with:
-       name: state
-   - name: Betterscan Scan
-     uses: topcodersonline/betterscan@v3
-   - name: Store state
-     uses: actions/upload-artifact@v2
-     with:
-       name: state
-       path: .checkmate
+    - name: Store state
+      uses: actions/upload-artifact@v2
+      with:
+        name: state
+        path: .checkmate
+    - name: Get state
+      uses: actions/download-artifact@v2
+      with:
+        name: state
+    - name: Betterscan Scan
+      uses: topcodersonline/betterscan@v3
+    - name: Store state
+      uses: actions/upload-artifact@v2
+      with:
+        name: state
+        path: .checkmate
