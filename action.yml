@@ -4,6 +4,8 @@ description: 'Betterscan Action'
 runs:
   using: "composite"
   steps:
+    - uses: actions/checkout@v3
+  steps:
    - name: Create folder
         run: |
         mkdir .checkmate
