@@ -1,3 +1,4 @@
+# action.yml
 name: 'Betterscan Action'
 description: 'Betterscan Action'
 
@@ -24,3 +25,7 @@ runs:
       with:
         name: state
         path: .checkmate
+branding:
+  icon: 'award'  
+  color: 'green'
+  
